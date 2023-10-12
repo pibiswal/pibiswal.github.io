@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Deploy to Render
+      - name: Deploy to Netlify
         env:
           deploy_url: ${{ secrets.NETLIFY_DEPLOY_HOOK }}?trigger_branch=${{ github.ref_name }}&trigger_title=triggered+by+push+${{ github.sha }}+to+branch+${{ github.ref_name }}&clear_cache=true
         run: |
